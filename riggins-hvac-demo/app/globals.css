@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+:root {
+  --surface: 255 255 255;
+  --text: 15 23 42; /* slate-900 */
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+}
+
+* {
+  scroll-margin-top: 96px;
+}
+
+@layer utilities {
+  .container-pad {
+    @apply mx-auto w-full max-w-6xl px-4;
+  }
+}

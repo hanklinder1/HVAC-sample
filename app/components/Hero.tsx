@@ -55,16 +55,18 @@ export function Hero() {
               {siteData.hero.subhead}
             </p>
 
-            <ul className="flex flex-wrap gap-2">
-              {siteData.hero.quickPoints.map((p) => (
-                <li
-                  key={p}
-                  className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
-                >
-                  {p}
-                </li>
-              ))}
-            </ul>
+            {siteData.hero.quickPoints.length > 0 ? (
+              <ul className="flex flex-wrap gap-2">
+                {siteData.hero.quickPoints.map((p) => (
+                  <li
+                    key={p}
+                    className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
+                  >
+                    {p}
+                  </li>
+                ))}
+              </ul>
+            ) : null}
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <a

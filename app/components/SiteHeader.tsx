@@ -33,11 +33,11 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link href="/" className="group inline-flex items-center gap-2">
             <span className="grid h-9 w-9 place-items-center rounded-xl bg-blue-600 text-white shadow-sm">
-              RH
+              DH
             </span>
             <span className="leading-tight">
               <span className="block text-sm font-extrabold tracking-tight text-slate-900 sm:text-base">
-                Riggins
+                David's
               </span>
               <span className="block text-xs font-semibold text-slate-600 sm:text-sm">
                 Heating & Air

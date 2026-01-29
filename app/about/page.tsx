@@ -66,29 +66,14 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-                <p className="text-sm font-bold text-slate-900">{siteData.about.meetTech.heading}</p>
-                <p className="mt-1 text-lg font-extrabold text-slate-900">{siteData.about.meetTech.name}</p>
-                <div className="mt-3 space-y-3">
-                  {siteData.about.meetTech.paragraphs.map((p) => (
-                    <p key={p} className="text-sm leading-7 text-slate-700">
-                      {p}
-                    </p>
-                  ))}
-                  <p className="text-xs text-slate-500">{siteData.about.meetTech.note}</p>
-                </div>
-              </div>
-
-              <div className="relative h-52 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
-                <Image
-                  src={siteData.media.images.tech.src}
-                  alt={siteData.media.images.tech.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                />
-              </div>
+            <div className="relative h-80 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50 shadow-sm">
+              <Image
+                src={siteData.media.images.family.src}
+                alt={siteData.media.images.family.alt}
+                fill
+                className="object-cover"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
             </div>
           </div>
         </div>

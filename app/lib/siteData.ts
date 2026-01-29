@@ -31,6 +31,7 @@ export type SiteData = {
       display: string;
       tel: string;
     };
+    email: string;
     hours: {
       label: string;
       detail: string;
@@ -153,24 +154,24 @@ export type SiteData = {
 
 export const siteData: SiteData = {
   business: {
-    name: "Riggins Heating & Air Conditioning",
+    name: "David's Heating & Air Conditioning",
     address: {
-      street: "154 Exchange St",
-      cityStateZip: "Pendleton, SC 29670",
-      full: "154 Exchange St, Pendleton, SC 29670",
+      street: "1110 Frontage Rd",
+      cityStateZip: "Seneca, SC 29672",
+      full: "1110 Frontage Rd, Seneca, SC 29672",
     },
     phone: {
-      display: "+1 (864) 646-2681",
-      tel: "+18646462681",
+      display: "+1 (864) 882-0479",
+      tel: "+18648820479",
     },
+    email: "info@davidshvac.com", // TODO: Replace with actual business email
     hours: {
       label: "Hours",
-      detail: "Mon–Fri 8:00 AM – 5:00 PM",
+      detail: "Mon–Fri 9:00 AM – 5:00 PM",
       emergencyNote: "Emergency service available.",
     },
-    serviceAreaSummary:
-      "Proudly serving Pendleton, Anderson, Clemson, Central, Seneca, Easley, and surrounding Upstate areas.",
-    towns: ["Pendleton", "Anderson", "Clemson", "Central", "Seneca", "Easley"],
+    serviceAreaSummary: "Serving Seneca and surrounding Upstate areas.",
+    towns: ["Seneca"],
     claims: {
       sameDayService: "Same-day service available",
       licensedInsured: "Licensed & Insured",
@@ -178,7 +179,7 @@ export const siteData: SiteData = {
     },
   },
   ui: {
-    topBarText: "Same-Day Service Available • Licensed & Insured • Reliable & Knowledgeable",
+    topBarText: "Going beyond just sales and service...",
     primaryCtas: {
       callNow: "Call Now",
       requestService: "Request Service",
@@ -186,12 +187,11 @@ export const siteData: SiteData = {
     nav: [
       { label: "Home", href: "/" },
       { label: "Services", href: "/services" },
-      { label: "Service Areas", href: "/service-areas" },
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
     ],
     footerDisclaimer: "Demo website for presentation purposes.",
-    reviewsDisclaimer: "Reviews shown from public customer feedback. Demo layout.",
+    reviewsDisclaimer: "Sample reviews for layout.",
     labels: {
       viewAllServices: "View all services",
       viewServiceAreas: "View service areas",
@@ -214,34 +214,30 @@ export const siteData: SiteData = {
     },
   },
   seo: {
-    title: "Riggins Heating & Air Conditioning | Pendleton, SC",
+    title: "David's Heating & Air Conditioning | Seneca, SC",
     description:
-      "Heating & air service in Pendleton and the Upstate. Repairs, maintenance, and installations with fast response times and straightforward pricing.",
+      "Heating & air service in Seneca and surrounding Upstate areas. Repairs, maintenance, and installations.",
   },
   hero: {
-    headline: "Fast, reliable heating & air service in Pendleton and the Upstate.",
-    subhead:
-      "Maintenance, repairs, and installations you can trust — with fast response times and honest pricing.",
-    quickPoints: ["Same-day availability", "Straightforward recommendations", "Quality workmanship"],
+    headline: "Going beyond just sales and service...",
+    subhead: "HVAC repairs, maintenance, and installations in Seneca and the Upstate.",
+    quickPoints: [],
   },
   pages: {
     services: {
       heading: "Services",
-      subhead:
-        "Repairs, installations, and maintenance for air conditioning, heating, heat pumps, ductwork, drains, and indoor air quality.",
+      subhead: "Repairs, installations, and maintenance for air conditioning, heating, heat pumps, and more.",
     },
     serviceAreas: {
       heading: "Service areas",
-      subhead:
-        "Based in Pendleton and serving nearby towns across the Upstate with responsive HVAC service.",
+      subhead: "Serving Seneca and surrounding Upstate areas.",
     },
   },
   home: {
     sections: {
-      servicesHeading: "HVAC services we handle every week",
-      servicesSubhead:
-        "Repairs, replacements, and preventative work for comfort and reliability across the Upstate.",
-      whyChooseHeading: "Why choose Riggins",
+      servicesHeading: "Services",
+      servicesSubhead: "Repairs, installations, and maintenance for your HVAC system.",
+      whyChooseHeading: "Why choose David's",
       whyChooseSubhead:
         "Straightforward service from a local Upstate company — focused on getting you comfortable again.",
       maintenanceHeading: "Prevent breakdowns with seasonal maintenance",
@@ -261,13 +257,7 @@ export const siteData: SiteData = {
       finalCtaSubhead:
         "Call now for quick scheduling. If it’s urgent, ask about emergency service.",
     },
-    trustBadges: [
-      "Licensed & insured",
-      "Same-day / fast response",
-      "Reasonable pricing",
-      "Reliable & knowledgeable",
-      "Local Upstate company",
-    ],
+    trustBadges: [],],
     whyChooseCards: [
       {
         title: "Fast response times",
@@ -275,15 +265,15 @@ export const siteData: SiteData = {
       },
       {
         title: "Honest recommendations",
-        description: "Clear explanations and practical options, without pressure.",
+        description: "We'll tell you what you need, not what we want to sell.",
       },
       {
         title: "Reasonable pricing",
         description: "Straightforward pricing and work that’s worth paying for.",
       },
       {
-        title: "Reliable workmanship",
-        description: "Careful work, clean job sites, and repairs you can count on.",
+        title: "Reliable service",
+        description: "On-time, professional, and thorough.",
       },
     ],
   },
@@ -333,32 +323,34 @@ export const siteData: SiteData = {
   ],
   testimonials: [
     {
-      name: "F Mellon",
-      when: "7 months ago",
+      name: "Beth Carlock",
+      when: "6 months ago",
       quote:
-        "James came out same day for overdue HVAC maintenance. Reasonable price, professional, honest, and courteous. Hard to find service like this.",
+        "Who comes out at 10:00 at night right before the 4th of July weekend? David's Heating and Air does. The problem was quickly identified and the offending part replaced for a fraction of what I was expecting. They are truly the best out there — I could not recommend them more highly!",
     },
     {
-      name: "Tyler Montgomery",
-      when: "7 months ago",
+      name: "Gregory Davis",
+      when: "a year ago",
       quote:
-        "James came out incredibly fast for a clogged drain and had our system back online within an hour. Been using Riggins for two years — reliable and knowledgeable.",
+        "Chad is better than just 'good'. Blower motor on my air handler went bad. He came right after I called, diagnosed the issue almost immediately, and installed it the next day. The price was reasonable and the service was exemplary.",
+    },
+    {
+      name: "Four Seasons Pest Solutions",
+      when: "2 months ago",
+      quote: "Always on time. Priced right. Techs know their stuff.",
     },
   ],
   about: {
-    heading: "Local HVAC service you can count on",
+    heading: "About David's Heating & Air Conditioning",
     storyParagraphs: [
-      "Riggins Heating & Air Conditioning is based in Pendleton and serves homeowners across the Upstate. We focus on responsive service, clear communication, and repairs that last.",
+      "David's Heating & Air Conditioning serves Seneca and surrounding Upstate areas. We focus on honest recommendations, quality work, and fair pricing.",
       "Whether it’s a no-cool call in the summer or a heat issue on a cold morning, our goal is simple: show up, diagnose the problem, and give you honest options you can feel good about.",
     ],
     meetTech: {
-      heading: "Meet James (optional)",
-      name: "James",
-      paragraphs: [
-        "James is known for quick response times and straightforward recommendations. Customers appreciate the professionalism, courteous service, and fair pricing.",
-        "This section is editable — you can add credentials, years of experience, and a short personal note.",
-      ],
-      note: "Demo note: names and details are editable in the site data file.",
+      heading: "",
+      name: "",
+      paragraphs: [],
+      note: "",
     },
   },
   contact: {
@@ -390,35 +382,31 @@ export const siteData: SiteData = {
   media: {
     images: {
       hero: {
-        src: "/images/hero-hvac.jpg",
-        alt: "Outdoor residential HVAC units beside a home",
+        src: "/images/brand-photo.png",
+        alt: "David's Heating & Air Conditioning branded graphic with an HVAC unit",
       },
       tech: {
         src: "/images/hvac-tech.jpg",
         alt: "HVAC technician checking system gauges",
       },
       family: {
-        src: "/images/happy-family.jpg",
-        alt: "Home comfort photo placeholder",
+        src: "/images/brand-photo.png",
+        alt: "David's Heating & Air Conditioning branded graphic with an HVAC unit",
       },
       van: {
         src: "/images/service-van.jpg",
         alt: "Service vehicle photo placeholder",
       },
-      gallery: [
-        { src: "/images/hvac-tech.jpg", alt: "Technician working on an HVAC system" },
-        { src: "/images/service-van.jpg", alt: "Service-ready equipment and vehicle placeholder" },
-        { src: "/images/happy-family.jpg", alt: "Comfortable home placeholder" },
-      ],
+      gallery: [],
     },
     video: {
       heroSrc: "/video/hero.mp4",
     },
   },
   map: {
-    title: "Map to Riggins Heating & Air Conditioning",
+    title: "Map to David's Heating & Air Conditioning",
     embedSrc:
-      "https://www.google.com/maps?q=154%20Exchange%20St%2C%20Pendleton%2C%20SC%2029670&output=embed",
+      "https://www.google.com/maps?q=1110%20Frontage%20Rd%2C%20Seneca%2C%20SC%2029672&output=embed",
   },
 };
 

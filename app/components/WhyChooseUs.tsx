@@ -8,12 +8,14 @@ export function WhyChooseUs() {
           <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 sm:text-3xl">
             {siteData.home.sections.whyChooseHeading}
           </h2>
-          <p className="max-w-2xl text-sm text-slate-600">
-            {siteData.home.sections.whyChooseSubhead}
-          </p>
+          {siteData.home.sections.whyChooseSubhead ? (
+            <p className="max-w-2xl text-sm text-slate-600">
+              {siteData.home.sections.whyChooseSubhead}
+            </p>
+          ) : null}
         </div>
 
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {siteData.home.whyChooseCards.map((card) => (
             <div
               key={card.title}

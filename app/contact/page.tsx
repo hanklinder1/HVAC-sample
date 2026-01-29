@@ -30,19 +30,27 @@ export default function ContactPage() {
     e.preventDefault();
     setSubmitting(true);
 
-    const payload = {
-      ...form,
-      business: siteData.business.name,
-      submittedAt: new Date().toISOString(),
-    };
+    try {
+      const response = await fetch("/api/request-service", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    // TODO: integrate Formspree or Resend to send emails.
-    // Example idea: POST to /api/request-service and deliver email + save lead.
-    console.log("Request Service payload:", payload);
+      if (!response.ok) {
+        throw new Error("Failed to send request");
+      }
 
-    await new Promise((r) => setTimeout(r, 400));
-    setSubmitting(false);
-    setSubmitted(true);
+      setSubmitted(true);
+      setForm(initialState);
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Sorry, there was an error sending your request. Please call us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (

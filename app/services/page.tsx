@@ -23,7 +23,7 @@ export default function ServicesPage() {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-blue-700"
+                className="inline-flex items-center justify-center rounded-2xl bg-red-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-red-700"
               >
                 {siteData.ui.primaryCtas.requestService}
               </Link>

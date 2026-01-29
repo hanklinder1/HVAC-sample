@@ -36,14 +36,14 @@ export function Hero() {
           </video>
         ) : null}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/70 to-slate-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/80 to-slate-950/95" />
       </div>
 
       <div className="relative">
         <div className="container-pad grid gap-10 py-16 md:grid-cols-2 md:items-center md:py-20">
           <div className="space-y-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white">
-              <span className="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true" />
+              <span className="h-2 w-2 rounded-full bg-red-400" aria-hidden="true" />
               {siteData.business.claims.sameDayService}
             </div>
 
@@ -77,7 +77,7 @@ export function Hero() {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-blue-700"
+                className="inline-flex items-center justify-center rounded-2xl bg-red-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-red-700"
               >
                 {siteData.ui.primaryCtas.requestService}
               </Link>

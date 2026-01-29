@@ -110,7 +110,7 @@ export function ServicesGrid({
               className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm"
             >
               <div className="flex items-start gap-3">
-                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-600 text-white shadow-sm">
+                <span className="grid h-10 w-10 place-items-center rounded-2xl bg-gradient-to-br from-red-600 to-blue-600 text-white shadow-sm">
                   <ServiceIcon iconKey={s.iconKey} />
                 </span>
                 <div className="space-y-1">
@@ -131,7 +131,7 @@ export function ServicesGrid({
           </a>
           <Link
             href="/contact"
-            className="inline-flex items-center justify-center rounded-2xl bg-blue-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-blue-700"
+            className="inline-flex items-center justify-center rounded-2xl bg-red-600 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-red-700"
           >
             {siteData.ui.primaryCtas.requestService}
           </Link>

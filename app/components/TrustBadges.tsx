@@ -11,7 +11,7 @@ export function TrustBadges() {
               className="flex items-center gap-3 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 shadow-sm"
             >
               <span
-                className="grid h-9 w-9 place-items-center rounded-xl bg-blue-600 text-white shadow-sm"
+                className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-red-600 to-blue-600 text-white shadow-sm"
                 aria-hidden="true"
               >
                 ✓

@@ -3,7 +3,7 @@ import { siteData } from "@/app/lib/siteData";
 
 export function CTASection() {
   return (
-    <section className="bg-blue-700">
+    <section className="bg-gradient-to-br from-red-600 to-blue-600">
       <div className="container-pad py-14">
         <div className="rounded-3xl bg-white/10 p-8 text-white shadow-sm ring-1 ring-white/15 md:p-10">
           <div className="grid gap-8 md:grid-cols-2 md:items-center">
@@ -22,7 +22,7 @@ export function CTASection() {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center rounded-2xl bg-slate-950 px-5 py-3 text-sm font-extrabold text-white shadow-sm hover:bg-slate-900"
+                className="inline-flex items-center justify-center rounded-2xl bg-white px-5 py-3 text-sm font-extrabold text-red-600 shadow-sm hover:bg-red-50"
               >
                 {siteData.ui.primaryCtas.requestService}
               </Link>

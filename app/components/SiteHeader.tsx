@@ -32,7 +32,7 @@ export function SiteHeader() {
       <div className="container-pad flex items-center justify-between gap-4 py-3">
         <div className="flex items-center gap-3">
           <Link href="/" className="group inline-flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-blue-600 text-white shadow-sm">
+            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-red-600 to-blue-600 text-white shadow-sm font-bold">
               DH
             </span>
             <span className="leading-tight">
@@ -73,7 +73,7 @@ export function SiteHeader() {
           </a>
           <Link
             href="/contact"
-            className="inline-flex rounded-xl bg-blue-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-blue-700"
+            className="inline-flex rounded-xl bg-red-600 px-3 py-2 text-sm font-bold text-white shadow-sm hover:bg-red-700"
           >
             {siteData.ui.primaryCtas.requestService}
           </Link>

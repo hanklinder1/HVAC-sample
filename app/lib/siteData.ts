@@ -382,22 +382,26 @@ export const siteData: SiteData = {
   media: {
     images: {
       hero: {
-        src: "/images/brand-photo.png",
-        alt: "David's Heating & Air Conditioning branded graphic with an HVAC unit",
+        src: "/images/hero-hvac.png",
+        alt: "Two HVAC technicians servicing an outdoor air conditioning unit",
       },
       tech: {
-        src: "/images/hvac-tech.jpg",
-        alt: "HVAC technician checking system gauges",
+        src: "/images/hvac-tech.png",
+        alt: "HVAC technician performing maintenance on an AC condenser",
       },
       family: {
-        src: "/images/brand-photo.png",
-        alt: "David's Heating & Air Conditioning branded graphic with an HVAC unit",
+        src: "/images/service-van.png",
+        alt: "HVAC service illustration",
       },
       van: {
-        src: "/images/service-van.jpg",
-        alt: "Service vehicle photo placeholder",
+        src: "/images/service-van.png",
+        alt: "HVAC service illustration",
       },
-      gallery: [],
+      gallery: [
+        { src: "/images/hero-hvac.png", alt: "Two HVAC technicians servicing an outdoor air conditioning unit" },
+        { src: "/images/hvac-tech.png", alt: "HVAC technician performing maintenance on an AC condenser" },
+        { src: "/images/service-van.png", alt: "HVAC service illustration" },
+      ],
     },
     video: {
       heroSrc: "/video/hero.mp4",

@@ -257,7 +257,7 @@ export const siteData: SiteData = {
       finalCtaSubhead:
         "Call now for quick scheduling. If it’s urgent, ask about emergency service.",
     },
-    trustBadges: [],],
+    trustBadges: [],
     whyChooseCards: [
       {
         title: "Fast response times",

@@ -1,8 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
 import { siteData } from "@/app/lib/siteData";
 
-const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+// Dynamically import Resend to avoid build errors if package isn't installed
+async function getResend() {
+  if (!process.env.RESEND_API_KEY) return null;
+  try {
+    const { Resend } = await import("resend");
+    return new Resend(process.env.RESEND_API_KEY);
+  } catch {
+    return null;
+  }
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -17,9 +25,12 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get Resend instance
+    const resend = await getResend();
+    
     // Check if Resend is configured
     if (!resend) {
-      console.warn("RESEND_API_KEY not set. Email not sent. Form data:", { name, phone, email, serviceType, message });
+      console.warn("RESEND_API_KEY not set or resend package not installed. Email not sent. Form data:", { name, phone, email, serviceType, message });
       // In development, still return success so form works
       if (process.env.NODE_ENV === "development") {
         return NextResponse.json(
